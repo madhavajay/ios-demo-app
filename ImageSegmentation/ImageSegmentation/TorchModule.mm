@@ -29,7 +29,7 @@
     return self;
 }
 
-- (unsigned char*)segmentImage:(void *)imageBuffer withWidth:(int)width withHeight:(int)height {
+- (NSMutableData*)segmentImage:(void *)imageBuffer withWidth:(int)width withHeight:(int)height {
     try {
         
         // see http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2007/segexamples/index.html for the list of classes with indexes
@@ -92,7 +92,7 @@
             }
         }
 
-        return buffer;
+        return data;
     } catch (const std::exception& exception) {
         NSLog(@"%s", exception.what());
     }

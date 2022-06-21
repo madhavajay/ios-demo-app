@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052FF2E818A402F4ECFF2460 /* Pods_ImageSegmentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C17C07A8D76480AF896251 /* Pods_ImageSegmentation.framework */; };
 		2655CA6425454E6E006AD893 /* UIImageHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2655CA6225454E6E006AD893 /* UIImageHelper.mm */; };
 		2658DBFB26EC059F00AA0F61 /* deeplabv3_scripted.pt in Resources */ = {isa = PBXBuildFile; fileRef = 2658DBFA26EC059F00AA0F61 /* deeplabv3_scripted.pt */; };
 		265BAFE8253A6A6800467AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BAFE7253A6A6800467AC4 /* AppDelegate.swift */; };
@@ -39,6 +40,9 @@
 		265BB015253A7F0500467AC4 /* TorchModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TorchModule.mm; sourceTree = "<group>"; };
 		265BB016253A7F0500467AC4 /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		265F9A6E2551CB3700B8F2EC /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		50218B0ABC3BABA0B1E0EE81 /* Pods-ImageSegmentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.release.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.release.xcconfig"; sourceTree = "<group>"; };
+		8B1DA0541EBA264AC8FACD4D /* Pods-ImageSegmentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.debug.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.debug.xcconfig"; sourceTree = "<group>"; };
+		A7C17C07A8D76480AF896251 /* Pods_ImageSegmentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSegmentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052FF2E818A402F4ECFF2460 /* Pods_ImageSegmentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +60,18 @@
 		0230FA7E0130B495026BC19E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				8B1DA0541EBA264AC8FACD4D /* Pods-ImageSegmentation.debug.xcconfig */,
+				50218B0ABC3BABA0B1E0EE81 /* Pods-ImageSegmentation.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		051252B2A190F96F35A96801 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7C17C07A8D76480AF896251 /* Pods_ImageSegmentation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		265BAFDB253A6A6800467AC4 = {
@@ -65,6 +80,7 @@
 				265BAFE6253A6A6800467AC4 /* ImageSegmentation */,
 				265BAFE5253A6A6800467AC4 /* Products */,
 				0230FA7E0130B495026BC19E /* Pods */,
+				051252B2A190F96F35A96801 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +122,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265BAFF8253A6A6900467AC4 /* Build configuration list for PBXNativeTarget "ImageSegmentation" */;
 			buildPhases = (
+				B96E90864897129D8794B38D /* [CP] Check Pods Manifest.lock */,
 				265BAFE0253A6A6800467AC4 /* Sources */,
 				265BAFE1253A6A6800467AC4 /* Frameworks */,
 				265BAFE2253A6A6800467AC4 /* Resources */,
@@ -167,6 +184,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B96E90864897129D8794B38D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageSegmentation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		265BAFE0253A6A6800467AC4 /* Sources */ = {
@@ -322,19 +364,20 @@
 		};
 		265BAFF9253A6A6900467AC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1DA0541EBA264AC8FACD4D /* Pods-ImageSegmentation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QMLQF78Y67;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ImageSegmentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pytorch.mobile.ImageSegmentation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madhavajay.segmentation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageSegmentation/ImageSegmentation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -345,19 +388,20 @@
 		};
 		265BAFFA253A6A6900467AC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50218B0ABC3BABA0B1E0EE81 /* Pods-ImageSegmentation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QMLQF78Y67;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ImageSegmentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pytorch.mobile.ImageSegmentation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.madhavajay.segmentation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageSegmentation/ImageSegmentation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -20,6 +20,10 @@
 		265BB00E253A6E0E00467AC4 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BB00D253A6E0E00467AC4 /* UIImage+Helper.swift */; };
 		265BB017253A7F0500467AC4 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 265BB015253A7F0500467AC4 /* TorchModule.mm */; };
 		265F9A6F2551CB3700B8F2EC /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 265F9A6E2551CB3700B8F2EC /* dog.jpg */; };
+		E21A4B062867CF1D001B80FE /* 1011.png in Resources */ = {isa = PBXBuildFile; fileRef = E21A4B052867CF1D001B80FE /* 1011.png */; };
+		E242CCFD2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.pt in Resources */ = {isa = PBXBuildFile; fileRef = E242CCFB2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.pt */; };
+		E242CCFE2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.ptl in Resources */ = {isa = PBXBuildFile; fileRef = E242CCFC2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.ptl */; };
+		E242CD002867C05E00347C8A /* 1014.png in Resources */ = {isa = PBXBuildFile; fileRef = E242CCFF2867C05E00347C8A /* 1014.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		50218B0ABC3BABA0B1E0EE81 /* Pods-ImageSegmentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.release.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.release.xcconfig"; sourceTree = "<group>"; };
 		8B1DA0541EBA264AC8FACD4D /* Pods-ImageSegmentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.debug.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.debug.xcconfig"; sourceTree = "<group>"; };
 		A7C17C07A8D76480AF896251 /* Pods_ImageSegmentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSegmentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E21A4B052867CF1D001B80FE /* 1011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1011.png; sourceTree = "<group>"; };
+		E242CCFB2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dfu-resnet34-two-pass_torchscript.pt"; sourceTree = "<group>"; };
+		E242CCFC2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dfu-resnet34-two-pass_torchscript.ptl"; sourceTree = "<group>"; };
+		E242CCFF2867C05E00347C8A /* 1014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1014.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,10 @@
 				265BB016253A7F0500467AC4 /* TorchModule.h */,
 				265BB015253A7F0500467AC4 /* TorchModule.mm */,
 				265BB00D253A6E0E00467AC4 /* UIImage+Helper.swift */,
+				E242CCFB2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.pt */,
+				E242CCFC2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.ptl */,
+				E21A4B052867CF1D001B80FE /* 1011.png */,
+				E242CCFF2867C05E00347C8A /* 1014.png */,
 				265BAFFF253A6B1200467AC4 /* ImageSegmentation-Bridging-Header.h */,
 				2658DBFA26EC059F00AA0F61 /* deeplabv3_scripted.pt */,
 				265BB007253A6B9600467AC4 /* deeplab.jpg */,
@@ -174,11 +186,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E242CD002867C05E00347C8A /* 1014.png in Resources */,
 				265F9A6F2551CB3700B8F2EC /* dog.jpg in Resources */,
+				E21A4B062867CF1D001B80FE /* 1011.png in Resources */,
 				265BAFF4253A6A6900467AC4 /* LaunchScreen.storyboard in Resources */,
 				265BB008253A6B9600467AC4 /* deeplab.jpg in Resources */,
+				E242CCFD2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.pt in Resources */,
 				265BAFF1253A6A6900467AC4 /* Assets.xcassets in Resources */,
 				2658DBFB26EC059F00AA0F61 /* deeplabv3_scripted.pt in Resources */,
+				E242CCFE2867C02300347C8A /* dfu-resnet34-two-pass_torchscript.ptl in Resources */,
 				265BAFEF253A6A6800467AC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,13 +4,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnSegment: UIButton!
 
-    private var imageName = "deeplab.jpg"
+    private var imageName = "1011.png"
     private var image : UIImage?
     private let imageHelper = UIImageHelper()
 
     private lazy var module: TorchModule = {
         if let filePath = Bundle.main.path(forResource:
-            "deeplabv3_scripted", ofType: "pt"),
+            "dfu-resnet34-two-pass_torchscript", ofType: "pt"),
             let module = TorchModule(fileAtPath: filePath) {
             return module
         } else {
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func doInfer(_ sender: Any) {
         btnSegment.isEnabled = false
         btnSegment.setTitle("Running the model...", for: .normal)
-        let resizedImage = image!.resized(to: CGSize(width: 250, height: 250))
+        let resizedImage = image!.resized(to: CGSize(width: 512, height: 512))
         guard let pixelBuffer = resizedImage.normalized() else {
             return
         }
@@ -62,11 +62,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func doRestart(_ sender: Any) {
-        if imageName == "deeplab.jpg" {
-            imageName = "dog.jpg"
+        if imageName == "1011.png" {
+            imageName = "1014.png"
         }
         else {
-            imageName = "deeplab.jpg"
+            imageName = "1011.png"
         }
         image = UIImage(named: imageName)!
         imageView.image = image

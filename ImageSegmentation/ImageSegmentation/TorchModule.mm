@@ -33,10 +33,13 @@
     try {
         
         // see http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2007/segexamples/index.html for the list of classes with indexes
-        const int CLASSNUM = 21;
-        const int DOG = 12;
-        const int PERSON = 15;
-        const int SHEEP = 17;
+//        const int CLASSNUM = 21;
+//        const int DOG = 12;
+//        const int PERSON = 15;
+//        const int SHEEP = 17;
+        const int CLASSNUM = 2;
+        const int VOID = 0;
+        const int WOUND = 1;
 
         at::Tensor tensor = torch::from_blob(imageBuffer, { 1, 3, width, height }, at::kFloat);
 
@@ -52,11 +55,17 @@
         c10::InferenceMode guard;
         
         CFTimeInterval startTime = CACurrentMediaTime();
-        auto outputDict = _impl.forward({ tensor }).toGenericDict();
+//        auto outputDict = _impl.forward({ tensor }).toGenericDict();
+        auto outputTensor = _impl.forward({ tensor }).toTensor();
         CFTimeInterval elapsedTime = CACurrentMediaTime() - startTime;
         NSLog(@"inference time:%f", elapsedTime);
         
-        auto outputTensor = outputDict.at("out").toTensor();
+//        auto outputTensor = output.toTensor();
+//        NSLog(@"putput tensor %@", outputTensor);
+//        for (auto key in outputDict.iterator()) {
+//            NSLog(@"keys %@", key)
+//        }
+//        NSLog(@"got output: %@", outputDict);
 
         float* floatBuffer = outputTensor.data_ptr<float>();
         if (!floatBuffer) {
@@ -86,9 +95,9 @@
                 // color coding for person (red), dog (green), sheep (blue)
                 // black color for background and other classes
                 buffer[n] = 0; buffer[n+1] = 0; buffer[n+2] = 0;
-                if (maxi == PERSON) buffer[n] = 255;
-                else if (maxi == DOG) buffer[n+1] = 255;
-                else if (maxi == SHEEP) buffer[n+2] = 255;
+                if (maxi == WOUND) buffer[n] = 255;
+//                else if (maxi == DOG) buffer[n+1] = 255;
+//                else if (maxi == SHEEP) buffer[n+2] = 255;
             }
         }
 
